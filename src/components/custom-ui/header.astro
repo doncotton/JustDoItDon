@@ -1,0 +1,20 @@
+---
+import DonLogotype from '../../components/brand/logotype.jsx'
+
+import { Image } from 'astro:assets';
+import DonMemoji from '../../assets/brand/dc_memoji.avif'
+import LinkedinMarktype from '../../components/logos/linkedin_marktype.jsx'
+import LinkedinMark from '../../components/logos/linkedin_markonly.jsx'
+---
+<header class="flex flex-row items-center justify-between bg-[var(--lime-a2)] backdrop-blur text-[var(--lime-12)] fixed left-auto right-auto mx-auto top-[5dvw] md:top-4 p-4 border-[4px] border-[var(--lime-12)] rounded-full max-w-[95dvw] w-full md:max-w-[1200px] z-50">
+    <div class="don-headLogo gap-2">
+        <Image src={DonMemoji} alt="Don Cottom - Creative Strategiest" loading="eager" class="w-12 h-12 border-[4px] border-[var(--lime-12)] rounded-full" />
+    <div><DonLogotype />
+    <p class="hidden md:block text-xs font-medium">Graphic Designer, Creative Strategist, Brand Management</p></div>
+</div>
+<a target="_blank" href="https://www.linkedin.com/in/don-cotton-0912494a">
+<LinkedinMarktype className="hidden md:inline-block max-w-24 h-8" />
+<LinkedinMark className="inline-block md:hidden max-w-24 h-8" />
+</a>
+
+</header>

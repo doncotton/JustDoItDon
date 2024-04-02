@@ -1,0 +1,189 @@
+@layer base {
+    @import "@prodkt/scales/scales/tomato";
+    @import "@prodkt/scales/scales/tomato-dark";
+    @import "@prodkt/scales/scales/tomato-alpha";
+    @import "@prodkt/scales/scales/tomato-dark-alpha";
+  
+    @import "@prodkt/scales/scales/red";
+    @import "@prodkt/scales/scales/red-dark";
+    @import "@prodkt/scales/scales/red-alpha";
+    @import "@prodkt/scales/scales/red-dark-alpha";
+  
+    @import "@prodkt/scales/scales/ruby";
+    @import "@prodkt/scales/scales/ruby-dark";
+    @import "@prodkt/scales/scales/ruby-alpha";
+    @import "@prodkt/scales/scales/ruby-dark-alpha";
+  
+    @import "@prodkt/scales/scales/crimson";
+    @import "@prodkt/scales/scales/crimson-dark";
+    @import "@prodkt/scales/scales/crimson-alpha";
+    @import "@prodkt/scales/scales/crimson-dark-alpha";
+  
+    @import "@prodkt/scales/scales/pink";
+    @import "@prodkt/scales/scales/pink-dark";
+    @import "@prodkt/scales/scales/pink-alpha";
+    @import "@prodkt/scales/scales/pink-dark-alpha";
+  
+    @import "@prodkt/scales/scales/plum";
+    @import "@prodkt/scales/scales/plum-dark";
+    @import "@prodkt/scales/scales/plum-alpha";
+    @import "@prodkt/scales/scales/plum-dark-alpha";
+  
+    @import "@prodkt/scales/scales/purple";
+    @import "@prodkt/scales/scales/purple-dark";
+    @import "@prodkt/scales/scales/purple-alpha";
+    @import "@prodkt/scales/scales/purple-dark-alpha";
+  
+    @import "@prodkt/scales/scales/violet";
+    @import "@prodkt/scales/scales/violet-dark";
+    @import "@prodkt/scales/scales/violet-alpha";
+    @import "@prodkt/scales/scales/violet-dark-alpha";
+  
+    @import "@prodkt/scales/scales/iris";
+    @import "@prodkt/scales/scales/iris-dark";
+    @import "@prodkt/scales/scales/iris-alpha";
+    @import "@prodkt/scales/scales/iris-dark-alpha";
+  
+    @import "@prodkt/scales/scales/indigo";
+    @import "@prodkt/scales/scales/indigo-dark";
+    @import "@prodkt/scales/scales/indigo-alpha";
+    @import "@prodkt/scales/scales/indigo-dark-alpha";
+  
+    @import "@prodkt/scales/scales/blue";
+    @import "@prodkt/scales/scales/blue-dark";
+    @import "@prodkt/scales/scales/blue-alpha";
+    @import "@prodkt/scales/scales/blue-dark-alpha";
+  
+    @import "@prodkt/scales/scales/cyan";
+    @import "@prodkt/scales/scales/cyan-dark";
+    @import "@prodkt/scales/scales/cyan-alpha";
+    @import "@prodkt/scales/scales/cyan-dark-alpha";
+  
+    @import "@prodkt/scales/scales/teal";
+    @import "@prodkt/scales/scales/teal-dark";
+    @import "@prodkt/scales/scales/teal-alpha";
+    @import "@prodkt/scales/scales/teal-dark-alpha";
+  
+    @import "@prodkt/scales/scales/jade";
+    @import "@prodkt/scales/scales/jade-dark";
+    @import "@prodkt/scales/scales/jade-alpha";
+    @import "@prodkt/scales/scales/jade-dark-alpha";
+  
+    @import "@prodkt/scales/scales/green";
+    @import "@prodkt/scales/scales/green-dark";
+    @import "@prodkt/scales/scales/green-alpha";
+    @import "@prodkt/scales/scales/green-dark-alpha";
+  
+    @import "@prodkt/scales/scales/grass";
+    @import "@prodkt/scales/scales/grass-dark";
+    @import "@prodkt/scales/scales/grass-alpha";
+    @import "@prodkt/scales/scales/grass-dark-alpha";
+  
+    @import "@prodkt/scales/scales/orange";
+    @import "@prodkt/scales/scales/orange-dark";
+    @import "@prodkt/scales/scales/orange-alpha";
+    @import "@prodkt/scales/scales/orange-dark-alpha";
+  
+    @import "@prodkt/scales/scales/brown";
+    @import "@prodkt/scales/scales/brown-dark";
+    @import "@prodkt/scales/scales/brown-alpha";
+    @import "@prodkt/scales/scales/brown-dark-alpha";
+  
+    @import "@prodkt/scales/scales/sky";
+    @import "@prodkt/scales/scales/sky-dark";
+    @import "@prodkt/scales/scales/sky-alpha";
+    @import "@prodkt/scales/scales/sky-dark-alpha";
+  
+    @import "@prodkt/scales/scales/mint";
+    @import "@prodkt/scales/scales/mint-dark";
+    @import "@prodkt/scales/scales/mint-alpha";
+    @import "@prodkt/scales/scales/mint-dark-alpha";
+    @import "@prodkt/scales/scales/mint-rgb";
+    @import "@prodkt/scales/scales/mint-dark-rgb";
+    @import "@prodkt/scales/scales/mint-rgb-alpha";
+    @import "@prodkt/scales/scales/mint-dark-rgb-alpha";
+  
+    @import "@prodkt/scales/scales/lime";
+    @import "@prodkt/scales/scales/lime-dark";
+    @import "@prodkt/scales/scales/lime-alpha";
+    @import "@prodkt/scales/scales/lime-dark-alpha";
+  
+    @import "@prodkt/scales/scales/yellow";
+    @import "@prodkt/scales/scales/yellow-dark";
+    @import "@prodkt/scales/scales/yellow-alpha";
+    @import "@prodkt/scales/scales/yellow-dark-alpha";
+  
+    @import "@prodkt/scales/scales/amber";
+    @import "@prodkt/scales/scales/amber-dark";
+    @import "@prodkt/scales/scales/amber-alpha";
+    @import "@prodkt/scales/scales/amber-dark-alpha";
+  
+    @import "@prodkt/scales/scales/gold";
+    @import "@prodkt/scales/scales/gold-dark";
+    @import "@prodkt/scales/scales/gold-alpha";
+    @import "@prodkt/scales/scales/gold-dark-alpha";
+  
+    @import "@prodkt/scales/scales/bronze";
+    @import "@prodkt/scales/scales/bronze-dark";
+    @import "@prodkt/scales/scales/bronze-alpha";
+    @import "@prodkt/scales/scales/bronze-dark-alpha";
+  
+    @import "@prodkt/scales/scales/gray";
+    @import "@prodkt/scales/scales/gray-dark";
+    @import "@prodkt/scales/scales/gray-alpha";
+    @import "@prodkt/scales/scales/gray-dark-alpha";
+  
+    @import "@prodkt/scales/scales/mauve";
+    @import "@prodkt/scales/scales/mauve-dark";
+    @import "@prodkt/scales/scales/mauve-alpha";
+    @import "@prodkt/scales/scales/mauve-dark-alpha";
+    @import "@prodkt/scales/scales/mauve-rgb";
+    @import "@prodkt/scales/scales/mauve-dark-rgb";
+    @import "@prodkt/scales/scales/mauve-rgb-alpha";
+    @import "@prodkt/scales/scales/mauve-dark-rgb-alpha";
+  
+    @import "@prodkt/scales/scales/slate";
+    @import "@prodkt/scales/scales/slate-dark";
+    @import "@prodkt/scales/scales/slate-alpha";
+    @import "@prodkt/scales/scales/slate-dark-alpha";
+  
+    @import "@prodkt/scales/scales/sage";
+    @import "@prodkt/scales/scales/sage-dark";
+    @import "@prodkt/scales/scales/sage-alpha";
+    @import "@prodkt/scales/scales/sage-dark-alpha";
+  
+    @import "@prodkt/scales/scales/olive";
+    @import "@prodkt/scales/scales/olive-dark";
+    @import "@prodkt/scales/scales/olive-alpha";
+    @import "@prodkt/scales/scales/olive-dark-alpha";
+  
+    @import "@prodkt/scales/scales/sand";
+    @import "@prodkt/scales/scales/sand-dark";
+    @import "@prodkt/scales/scales/sand-alpha";
+    @import "@prodkt/scales/scales/sand-dark-alpha";
+  
+    @import "@prodkt/scales/scales/midnight";
+    @import "@prodkt/scales/scales/midnight-dark";
+    @import "@prodkt/scales/scales/midnight-alpha";
+    @import "@prodkt/scales/scales/midnight-dark-alpha";
+    @import "@prodkt/scales/scales/midnight-rgb";
+    @import "@prodkt/scales/scales/midnight-dark-rgb";
+    @import "@prodkt/scales/scales/midnight-rgb-alpha";
+    @import "@prodkt/scales/scales/midnight-dark-rgb-alpha";
+  
+    @import "@prodkt/scales/scales/vibrantviolet";
+    @import "@prodkt/scales/scales/vibrantviolet-dark";
+    @import "@prodkt/scales/scales/vibrantviolet-alpha";
+    @import "@prodkt/scales/scales/vibrantviolet-dark-alpha";
+    @import "@prodkt/scales/scales/vibrantviolet-rgb";
+    @import "@prodkt/scales/scales/vibrantviolet-dark-rgb";
+    @import "@prodkt/scales/scales/vibrantviolet-rgb-alpha";
+    @import "@prodkt/scales/scales/vibrantviolet-dark-rgb-alpha";
+  
+    @import "@prodkt/scales/scales/white-alpha";
+    @import "@prodkt/scales/scales/black-alpha";
+    @import "ghost";
+    @import "ghost-dark";
+  }
+  
+  
