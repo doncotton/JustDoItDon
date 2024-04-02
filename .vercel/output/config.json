@@ -14,14 +14,6 @@
 		{
 			"src": "^\\/_image$",
 			"dest": "_render"
-		},
-		{
-			"src": "^\\/old_index\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/$",
-			"dest": "_render"
 		}
 	]
 }
