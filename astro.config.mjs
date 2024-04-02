@@ -10,7 +10,8 @@ export default defineConfig({
   adapter: vercel({
     webAnalytics: {
       enabled: true,
-    },}),
+    },
+    imageService: true,}),
   integrations: [tailwind({
     nesting: true,}), react()]
 });
