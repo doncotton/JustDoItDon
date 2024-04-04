@@ -7,8 +7,8 @@
 @layer base {
   :root {
     --default-font-family: 'Figtree', sans-serif;
-    --background: var(--lime-9);
-    --foreground: var(--lime-9);
+    --background: var(--lime-1);
+    --foreground: var(--ghost-aa12);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -39,13 +39,15 @@
 
 
     --bg-background: var(--background);
-    --text-foreground: var(--foreground);
+    --text-foreground: var(--foreground) !important;
+    --dc-text-foreground: var(--lime-12);
+    --dc-bg-background: var(--lime-1);
   }
 }
 
 @layer base {
   body {
-    @apply bg-[var(--bg-background)] text-foreground antialiased;
+    @apply bg-[var(--dc-bg-background)] text-[var(--dc-text-foreground)] antialiased;
     font-family: var(--default-font-family);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

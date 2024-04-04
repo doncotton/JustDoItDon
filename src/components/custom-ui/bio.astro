@@ -3,13 +3,13 @@ import { Image } from "astro:assets";
 import PlaceholderBackground from "../../assets/background/blocks-grid.avif";
 ---
 
-<div class="w-full max-w-[100dvw] relative h-auto py-20">
+<div class="w-full max-w-[100dvw] relative h-auto py-20 px-4">
   <div
-    class="w-full max-w-[100dvw] z-[1] relative mx-auto md:max-w-[1200px] flex flex-row items-center justify-between gap-4"
+    class="w-full max-w-[100dvw] z-[1] relative mx-auto md:max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-4"
   >
   <p class="absolute -top-12 tracking-tighter bottom-auto left-6 right-auto text-6xl font-black text-[var(--ghost-a1)]">About Don</p>
     <div
-      class="w-2/3 flex flex-col gap-6 items-start justify-start p-10 border-[4px] border-[var(--ghost-a1)] bg-[var(--lime-a1)] backdrop-blur-sm rounded-2xl shadow-2xl"
+      class="w-full md:w-2/3 flex flex-col sm:gap-2 md:gap-6 items-start justify-start p-4 md:p-10 border-[4px] border-[var(--ghost-a1)] bg-[var(--lime-a1)] backdrop-blur-sm rounded-2xl shadow-2xl"
     >
       <p>
         Talented and driven Visual Communicator with a proven record of
@@ -36,7 +36,7 @@ import PlaceholderBackground from "../../assets/background/blocks-grid.avif";
         business world, establishing and maintaining your brand.
       </p>
     </div>
-    <div class="w-1/3"></div>
+    <div class="w-full md:w-1/3"></div>
   </div>
 
   <Image

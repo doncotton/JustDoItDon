@@ -1,5 +1,6 @@
 ---
 import DonLogotype from '../../components/brand/logotype.jsx'
+import { ThemeToggle } from './jsx/theme-toggle.tsx'
 
 import { Image } from 'astro:assets';
 import DonMemoji from '../../assets/brand/dc_memoji.avif'
@@ -12,6 +13,7 @@ import LinkedinMark from '../../components/logos/linkedin_markonly.jsx'
     <div><DonLogotype />
     <p class="hidden md:block text-xs font-medium">Graphic Designer, Creative Strategist, Brand Management</p></div>
 </div>
+<ThemeToggle client:only="react" />
 <a target="_blank" href="https://www.linkedin.com/in/don-cotton-0912494a">
 <LinkedinMarktype className="hidden md:inline-block max-w-24 h-8" />
 <LinkedinMark className="inline-block md:hidden max-w-24 h-8" />
