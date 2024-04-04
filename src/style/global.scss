@@ -40,6 +40,7 @@
 
     --bg-background: var(--background);
     --text-foreground: var(--foreground) !important;
+    --dc-font-family: var(--default-font-family);
     --dc-text-foreground: var(--lime-12);
     --dc-bg-background: var(--lime-1);
   }
@@ -48,7 +49,7 @@
 @layer base {
   body {
     @apply bg-[var(--dc-bg-background)] text-[var(--dc-text-foreground)] antialiased;
-    font-family: var(--default-font-family);
+    font-family: var(--dc-font-family);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     motion-rotation: antialiased;

@@ -1,3 +1,4 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -12,11 +13,8 @@ module.exports = {
       },
     },
     extend: {
-
       fontFamily: {
-        sans: [
-          '"Figtree"',
-        ],
+        sans: ['Figtree', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",
