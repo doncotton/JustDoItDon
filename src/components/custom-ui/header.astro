@@ -7,16 +7,23 @@ import DonMemoji from '../../assets/brand/dc_memoji.avif'
 import LinkedinMarktype from '../../components/logos/linkedin_marktype.jsx'
 import LinkedinMark from '../../components/logos/linkedin_markonly.jsx'
 ---
-<header class="flex flex-row items-center justify-between bg-[var(--lime-a2)] backdrop-blur text-[var(--lime-12)] fixed left-auto right-auto mx-auto top-[5dvw] md:top-4 p-4 border-[4px] border-[var(--lime-12)] rounded-full max-w-[95dvw] w-full md:max-w-[1200px] z-50">
-    <div class="don-headLogo gap-2">
-        <Image src={DonMemoji} alt="Don Cottom - Creative Strategiest" loading="eager" class="w-12 h-12 border-[4px] border-[var(--lime-12)] rounded-full" />
-    <div><DonLogotype />
-    <p class="hidden md:block text-xs font-medium">Graphic Designer, Creative Strategist, Brand Management</p></div>
-</div>
+<header class="dc-header-container group flex flex-row items-center justify-between bg-gradient-to-tr from-[var(--lime-a4)] to-[var(--lime-a1)] ring-2 outline-1 overflow-hidden outline-offset-1 outline-[var(--lime-a3)] shadow-xl shadow-[var(--lime-a3)] drop-shadow-[var(--lime-a2)] ring-[var(--lime-a2)] backdrop-blur text-[var(--lime-12)] fixed left-auto right-auto mx-auto top-[5dvw] md:top-4 p-[4px] border-[1px] border-[var(--lime-a3)] rounded-full max-w-[95dvw] w-full md:max-w-[1200px] z-50">
+    <div class="dc-header-innerContainer w-full inner-shadow shadow-[var(--lime-a6)] border p-0 border-[var(--lime-a1)] flex flex-row items-center justify-between rounded-full ring-1 outline-offset-1 outline-[var(--lime-a3)] outline-1 ring-[var(--lime-a2)] shadow-sm">
+    <div class="don-headLogo gap-2 p-0 m-0 top-0 bottom-0 left-0 right-0">
+        <div class="p-0 w-16 h-16 rounded-full">
+            <Image src={DonMemoji} alt="Don Cottom - Creative Strategiest" loading="eager" class="scale-100 group-hover:scale-90 transition-all duration-1000 w-16 h-16 border border-[var(--lime-a1)] rounded-full ring-1 outline-offset-2 outline-[var(--lime-a3)] outline-1 ring-[var(--lime-a4)] shadow-md shadow-[var(--lime-a3)]" />
+            
+        </div>    
+        <div class="p-2"><DonLogotype />
+        <p class="hidden md:block text-xs font-medium">Graphic Designer, Creative Strategist, Brand Management</p></div>
+    </div>
+    
+    <div class="px-4 py-2 flex flex-row items-center justify-between gap-2">
 <ThemeToggle client:only="react" />
 <a target="_blank" href="https://www.linkedin.com/in/don-cotton-0912494a">
 <LinkedinMarktype className="hidden md:inline-block max-w-24 h-8" />
 <LinkedinMark className="inline-block md:hidden max-w-24 h-8" />
 </a>
-
+</div>
+</div>
 </header>
