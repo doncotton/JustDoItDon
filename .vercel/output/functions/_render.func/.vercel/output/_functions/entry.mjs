@@ -1,6 +1,6 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_Bffsn6xS.mjs';
-import { A as AstroError, R as ResponseSentError, M as MiddlewareNoDataOrNextCalled, i as MiddlewareNotAResponse, j as ROUTE_TYPE_HEADER, k as REROUTE_DIRECTIVE_HEADER, G as GetStaticPathsRequired, l as InvalidGetStaticPathsReturn, n as InvalidGetStaticPathsEntry, o as GetStaticPathsExpectedParams, p as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, D as DEFAULT_404_COMPONENT, N as NoMatchingStaticPathFound, q as PrerenderDynamicEndpointPathCollide, t as ReservedSlotName, u as renderSlotToString, v as renderJSX, w as chunkToString, L as LocalsNotAnObject, x as clientLocalsSymbol, y as clientAddressSymbol$1, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, z as ASTRO_VERSION, B as responseSentSymbol$1, H as AstroResponseHeadersReassigned, J as renderPage, K as renderEndpoint, O as REROUTABLE_STATUS_CODES } from './chunks/astro_9XjeIfFE.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_BzLl3qNm.mjs';
+import { A as AstroError, R as ResponseSentError, M as MiddlewareNoDataOrNextCalled, i as MiddlewareNotAResponse, j as ROUTE_TYPE_HEADER, k as REROUTE_DIRECTIVE_HEADER, G as GetStaticPathsRequired, l as InvalidGetStaticPathsReturn, n as InvalidGetStaticPathsEntry, o as GetStaticPathsExpectedParams, p as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, D as DEFAULT_404_COMPONENT, N as NoMatchingStaticPathFound, q as PrerenderDynamicEndpointPathCollide, t as ReservedSlotName, u as renderSlotToString, v as renderJSX, w as chunkToString, L as LocalsNotAnObject, x as clientLocalsSymbol, y as clientAddressSymbol$1, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, z as ASTRO_VERSION, B as responseSentSymbol$1, H as AstroResponseHeadersReassigned, J as renderPage, K as renderEndpoint, O as REROUTABLE_STATUS_CODES } from './chunks/astro_DPUO5fey.mjs';
 import { serialize, parse } from 'cookie';
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, f as fileExtension, s as slash, p as prependForwardSlash, g as removeTrailingForwardSlash, h as collapseDuplicateSlashes } from './chunks/astro/assets-service_CkDDNIHh.mjs';
 import 'html-escaper';
@@ -1880,8 +1880,9 @@ class NodeApp extends App {
    */
   static createRequest(req, { skipBody = false } = {}) {
     const protocol = req.headers["x-forwarded-proto"] ?? ("encrypted" in req.socket && req.socket.encrypted ? "https" : "http");
-    const hostname = req.headers.host || req.headers[":authority"];
-    const url = `${protocol}://${hostname}${req.url}`;
+    const hostname = req.headers["x-forwarded-host"] ?? req.headers.host ?? req.headers[":authority"];
+    const port = req.headers["x-forwarded-port"];
+    const url = `${protocol}://${hostname}${port ? `:${port}` : ""}${req.url}`;
     const options = {
       method: req.method || "GET",
       headers: makeRequestHeaders(req)
@@ -2015,10 +2016,10 @@ const createExports = (manifest, { middlewareSecret }) => {
   return { default: handler };
 };
 
-const _page0 = () => import('./chunks/generic_BArpg9NG.mjs');
-const _page1 = () => import('./chunks/index_DoW4Bw7B.mjs');
+const _page0 = () => import('./chunks/generic_CgkOeBRg.mjs');
+const _page1 = () => import('./chunks/index_BILoOXq6.mjs');
 const pageMap = new Map([
-    ["node_modules/.pnpm/astro@4.5.13_sass@1.72.0_typescript@5.4.3/node_modules/astro/dist/assets/endpoint/generic.js", _page0],
+    ["node_modules/.pnpm/astro@4.5.16_sass@1.74.1_typescript@5.4.4/node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/index.astro", _page1]
 ]);
 
@@ -2028,7 +2029,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "d7ae1bfe-f0e6-448e-b3af-9307ec5b4fcd"
+    "middlewareSecret": "3d1475a7-076e-4c35-a8d6-7afca8aa5f30"
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;

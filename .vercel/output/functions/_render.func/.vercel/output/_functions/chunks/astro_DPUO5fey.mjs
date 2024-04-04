@@ -264,7 +264,7 @@ class AstroError extends Error {
   }
 }
 
-const ASTRO_VERSION = "4.5.13";
+const ASTRO_VERSION = "4.5.16";
 const REROUTE_DIRECTIVE_HEADER = "X-Astro-Reroute";
 const ROUTE_TYPE_HEADER = "X-Astro-Route-Type";
 const DEFAULT_404_COMPONENT = "astro-default-404";
@@ -1442,6 +1442,7 @@ function getHTMLElementName(constructor) {
 
 const needsHeadRenderingSymbol = Symbol.for("astro.needsHeadRendering");
 const rendererAliases = /* @__PURE__ */ new Map([["solid", "solid-js"]]);
+const clientOnlyValues = /* @__PURE__ */ new Set(["solid-js", "react", "preact", "vue", "svelte", "lit"]);
 function guessRenderers(componentUrl) {
   const extname = componentUrl?.split(".").pop();
   switch (extname) {
@@ -1476,7 +1477,7 @@ function removeStaticAstroSlot(html, supportsAstroStaticSlot = true) {
   return html.replace(exp, "");
 }
 async function renderFrameworkComponent(result, displayName, Component, _props, slots = {}) {
-  if (!Component && !_props["client:only"]) {
+  if (!Component && "client:only" in _props === false) {
     throw new Error(
       `Unable to render ${displayName} because it is ${Component}!
 Did you forget to import the component or is it possible there is a typo?`
@@ -1544,11 +1545,12 @@ Did you forget to import the component or is it possible there is a typo?`
     }
   } else {
     if (metadata.hydrateArgs) {
-      const passedName = metadata.hydrateArgs;
-      const rendererName = rendererAliases.has(passedName) ? rendererAliases.get(passedName) : passedName;
-      renderer = renderers.find(
-        ({ name }) => name === `@astrojs/${rendererName}` || name === rendererName
-      );
+      const rendererName = rendererAliases.has(metadata.hydrateArgs) ? rendererAliases.get(metadata.hydrateArgs) : metadata.hydrateArgs;
+      if (clientOnlyValues.has(rendererName)) {
+        renderer = renderers.find(
+          ({ name }) => name === `@astrojs/${rendererName}` || name === rendererName
+        );
+      }
     }
     if (!renderer && validRenderers.length === 1) {
       renderer = validRenderers[0];
@@ -1563,13 +1565,30 @@ Did you forget to import the component or is it possible there is a typo?`
   let componentServerRenderEndTime;
   if (!renderer) {
     if (metadata.hydrate === "only") {
-      throw new AstroError({
-        ...NoClientOnlyHint,
-        message: NoClientOnlyHint.message(metadata.displayName),
-        hint: NoClientOnlyHint.hint(
-          probableRendererNames.map((r) => r.replace("@astrojs/", "")).join("|")
-        )
-      });
+      const rendererName = rendererAliases.has(metadata.hydrateArgs) ? rendererAliases.get(metadata.hydrateArgs) : metadata.hydrateArgs;
+      if (clientOnlyValues.has(rendererName)) {
+        const plural = validRenderers.length > 1;
+        throw new AstroError({
+          ...NoMatchingRenderer,
+          message: NoMatchingRenderer.message(
+            metadata.displayName,
+            metadata?.componentUrl?.split(".").pop(),
+            plural,
+            validRenderers.length
+          ),
+          hint: NoMatchingRenderer.hint(
+            formatList(probableRendererNames.map((r) => "`" + r + "`"))
+          )
+        });
+      } else {
+        throw new AstroError({
+          ...NoClientOnlyHint,
+          message: NoClientOnlyHint.message(metadata.displayName),
+          hint: NoClientOnlyHint.hint(
+            probableRendererNames.map((r) => r.replace("@astrojs/", "")).join("|")
+          )
+        });
+      }
     } else if (typeof Component !== "string") {
       const matchingRenderers = validRenderers.filter(
         (r) => probableRendererNames.includes(r.name)
@@ -1613,6 +1632,12 @@ If you're still stuck, please open an issue on GitHub or join us at https://astr
     }
   } else {
     if (metadata.hydrate === "only") {
+      const rendererName = rendererAliases.has(metadata.hydrateArgs) ? rendererAliases.get(metadata.hydrateArgs) : metadata.hydrateArgs;
+      if (!clientOnlyValues.has(rendererName)) {
+        console.warn(
+          `The client:only directive for ${metadata.displayName} is not recognized. The renderer ${renderer.name} will be used. If you intended to use a different renderer, please provide a valid client:only directive.`
+        );
+      }
       html = await renderSlotToString(result, slots?.fallback);
     } else {
       const componentRenderStartTime = performance.now();
