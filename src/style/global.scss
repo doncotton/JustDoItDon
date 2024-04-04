@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --default-font-family: 'Figtree', sans-serif;
+    --default-font-family: "Figtree", sans-serif;
     --background: var(--lime-1);
     --foreground: var(--ghost-aa12);
 
@@ -47,9 +47,58 @@
 }
 
 @layer base {
-  body {
-    @apply bg-[var(--dc-bg-background)] text-[var(--dc-text-foreground)] antialiased;
+
+  .figtree-light {
     font-family: var(--dc-font-family);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .figtree-regular {
+    font-family: var(--dc-font-family);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .figtree-medium {
+    font-family: var(--dc-font-family);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .figtree-semibold {
+    font-family: var(--dc-font-family);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .figtree-bold {
+    font-family: var(--dc-font-family);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .figtree-extrabold {
+    font-family: var(--dc-font-family);
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .figtree-black {
+    font-family: var(--dc-font-family);
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  body {
+    @apply bg-[var(--dc-bg-background)] text-[var(--dc-text-foreground)] antialiased figtree-regular;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     motion-rotation: antialiased;
@@ -58,6 +107,11 @@
     letter-spacing: -0.025em;
     text-wrap: balance;
     scrollbar-gutter: stable both-edges;
+  }
+
+
+  h1,h2,h3,h4,h5,h6 {
+    @apply figtree-semibold tracking-tighter;
   }
 }
 
