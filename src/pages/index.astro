@@ -1,12 +1,39 @@
 ---
 import DonLayout from '../layouts/DonLayout.astro';
-import Hero from '../components/custom-ui/hero.astro'
-import Bio from '../components/custom-ui/bio.astro'
+import Hero from '../components/custom-ui/hero.astro';
+import Bio from '../components/custom-ui/bio.astro';
+import Card from '../components/Card.astro';
 ---
 
 <DonLayout title="Welcome to Astro.">
 	<main class="w-full max-w-[100dvw]">
 		<Hero heading="Graphic Designer, Creative Strategist, Brand Management" subheading="Account & Talent Manager, Sales, Marketing, Production Artist" />
 		<Bio />
+		
+		<section class="container mx-auto px-6 py-12">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<Card 
+					title="Creative Digital Trust Audit"
+					description="Synchronize your website and Google Business Profile to maximize local SEO, establish authority, and build client trust."
+					imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+					badgeType="promo"
+					link="/services/audit"
+				/>
+				<Card 
+					title="Strategic Brand Management"
+					description="Elevating visual communication from concept to final file distribution. Ensure your brand stands out in competitive industries."
+					imageUrl="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80"
+					badgeType="ad"
+					link="/services/branding"
+				/>
+				<Card 
+					title="Marketing & Lead Generation"
+					description="Automated content creation, lead generation funnels, and robust digital systems to scale your reach effortlessly."
+					imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+					badgeType="news"
+					link="/services/marketing"
+				/>
+			</div>
+		</section>
 	</main>
 </DonLayout>
