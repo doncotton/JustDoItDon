@@ -20,7 +20,42 @@
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "astro": "^6.3.3",{
+  "name": "JustDoItDon",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "preinstall": "node preinstall.js"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/react": "^5.0.6",
+    "@astrojs/vercel": "^10.0.7",
+    "@fontsource/figtree": "^5.0.19",
+    "@prodkt/scales": "^0.0.5",
+    "@radix-ui/react-navigation-menu": "^1.2.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "astro": "^6.3.3",
+    "astro-page-insight": "^0.6.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.40.0",
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sass": "^1.80.0",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss": "^4.0.0",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
     "astro-page-insight": "^0.6.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
